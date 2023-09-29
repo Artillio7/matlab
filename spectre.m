@@ -1,0 +1,11 @@
+x=0 :255 ;
+y=2*pi*(8/256)*ones(1,256) ;
+a=sin(x'*y) ;
+figure() ;
+imshow(a) ;
+colormap(gray) ;
+A=fft2(a) ;
+A=fftshift(A) ;
+figure() ;
+imshow(log(abs(A))) ;
+colormap(gray) ;
